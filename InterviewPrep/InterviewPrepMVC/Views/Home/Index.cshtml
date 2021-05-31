@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Colin's Interview Preparation";
+}
+
+<div class="text-center">
+    <h2>Colin's Interview Prep</h2>
+    <p>This is where I will be preparing interview questions.</p>
+
+    <p>1. Find the length of the longest non-repeating string within a string</p>
+    <p>
+        This exercise will be done using a standard HTML post. This isn't ideal because there will be a post back.
+        This means all of this will be rebuilt, which is a lot of data over the wire for nothing as this is server rendered.
+
+        Also, as standard HTML, we don't get the benefit of intelligence, any of the internal functionality of Visual Studio.
+    </p>
+    <form action="home/ProcessForm" method="post">
+        <input type="text" id="longestStringLength" name="longestStringLength" />
+        <br />
+        <input type="submit" value="submit form" />
+    </form>
+    <p>@ViewBag.LongestUniqueStringLength</p>
+</div>
